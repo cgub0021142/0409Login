@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign form / sign up form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="form sign-in-form">
+          <div class="wrapper">
+            <form action="##">
+              <h1>Sign in</h1>
+              <p>Use your email to sign in.</p>
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="pwd" />
+              <button type="submit">Sign in</button>
+            </form>
+          </div>
+        </div>
+        <div class="form sign-up-form">
+          <div class="wrapper">
+            <form action="##">
+              <h1>Sign up</h1>
+              <p>Use email account to sign up.</p>
+              <input type="text" placeholder="Email account" />
+              <input type="password" placeholder="pwd" />
+              <button type="submit">Sign up</button>
+            </form>
+          </div>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-left">
+              <h1>Create account</h1>
+              <p>or</p>
+              <button id="login-btn">Log In</button>
+            </div>
+            <div class="overlay-right">
+              <h1>Log In</h1>
+              <p>or</p>
+              <button id="signup-btn">Create Account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#login-btn").on("click", () => {
+        $(".overlay-container").css("transform", "translate(100%,0)");
+        $(".overlay").css("transform", "translate(-50%,0)");
+      });
+      $("#signup-btn").on("click", () => {
+        $(".overlay-container").css("transform", "translate(0,0)");
+        $(".overlay").css("transform", "translate(0,0)");
+      });
+    </script>
+  </body>
+</html>
